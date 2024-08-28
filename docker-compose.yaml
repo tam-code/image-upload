@@ -1,0 +1,60 @@
+version: "3.9"
+services:
+  app:
+    image: golang:1.22
+    volumes:
+      - .:/app
+      - ./upload:/app/upload
+    ports:
+      - 9521:8080
+    working_dir: /app
+    command: make --no-print-directory restart
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: image-upload
+    ports:
+      - 27017:27017
+      
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "22186:2181"
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper
+    ports:
+      - "29095:29095"
+      - "9092:9092"
+    entrypoint: sh -c 'sleep 20 && /etc/confluent/docker/run'
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,LISTENER_DOCKER_EXTERNAL://localhost:29095
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_CREATE_TOPICS: "local-connect-offset:1:1,local-connect-status:1:1,local-connect-config:1:1"
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    depends_on:
+      - kafka
+    ports:
+      - "9326:8080"
+    environment:
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "kafka:9092"
+      KAFKA_CLUSTERS_0_NAME: "local"
+      CONTROL_CENTER_REPLICATION_FACTOR: 1
+      PORT: 9326
+

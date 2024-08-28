@@ -1,0 +1,17 @@
+apiPort: 8080
+kafka:
+  brokers: "kafka:9092"
+  topic: "image_uploaded"
+  group: "group-image-uploaded"
+  withTls: false
+  dialerTimeoutMilliseconds: 5000
+  maxWaitTimeoutMilliseconds: 500
+  numConsumers: 2
+mongoDb:
+  host: "mongo"
+  port: 27017
+  user: "root"
+  password: "password"
+  database: "image-upload"
+  options: "authSource=admin"
+  
