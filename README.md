@@ -3,6 +3,8 @@
 Image upload is an application built with golang and has rest api to generate upload link and upload image
 and async message through kafka to handle some data after upload.
 
+![Diagram for the app](diagram.jpeg)
+
 ## Installation
 
 Use docker-compose install the app.
