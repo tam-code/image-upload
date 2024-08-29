@@ -16,9 +16,9 @@ import (
 	"github.com/evanoberholster/imagemeta"
 	"github.com/gorilla/mux"
 
-	"github.com/tam-code/lrn/src/models"
-	"github.com/tam-code/lrn/src/producers"
-	"github.com/tam-code/lrn/src/repositories"
+	"github.com/tam-code/image-upload/src/models"
+	"github.com/tam-code/image-upload/src/producers"
+	"github.com/tam-code/image-upload/src/repositories"
 )
 
 const (

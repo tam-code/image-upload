@@ -15,9 +15,9 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/gorilla/mux"
 	"github.com/stretchr/testify/assert"
-	mocksProducer "github.com/tam-code/lrn/mocks/producers"
-	mocks "github.com/tam-code/lrn/mocks/repositories"
-	"github.com/tam-code/lrn/src/models"
+	mocksProducer "github.com/tam-code/image-upload/mocks/producers"
+	mocks "github.com/tam-code/image-upload/mocks/repositories"
+	"github.com/tam-code/image-upload/src/models"
 )
 
 func TestUploadImage(t *testing.T) {

@@ -3,10 +3,10 @@ package routes
 import (
 	"github.com/gorilla/mux"
 
-	"github.com/tam-code/lrn/src/controllers"
-	"github.com/tam-code/lrn/src/middleware"
-	"github.com/tam-code/lrn/src/producers"
-	"github.com/tam-code/lrn/src/repositories"
+	"github.com/tam-code/image-upload/src/controllers"
+	"github.com/tam-code/image-upload/src/middleware"
+	"github.com/tam-code/image-upload/src/producers"
+	"github.com/tam-code/image-upload/src/repositories"
 )
 
 const (

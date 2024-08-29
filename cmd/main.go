@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/tam-code/lrn/config"
-	"github.com/tam-code/lrn/src/consumers"
-	"github.com/tam-code/lrn/src/databases"
-	"github.com/tam-code/lrn/src/kafka"
-	"github.com/tam-code/lrn/src/producers"
-	"github.com/tam-code/lrn/src/repositories"
-	"github.com/tam-code/lrn/src/routes"
+	"github.com/tam-code/image-upload/config"
+	"github.com/tam-code/image-upload/src/consumers"
+	"github.com/tam-code/image-upload/src/databases"
+	"github.com/tam-code/image-upload/src/kafka"
+	"github.com/tam-code/image-upload/src/producers"
+	"github.com/tam-code/image-upload/src/repositories"
+	"github.com/tam-code/image-upload/src/routes"
 )
 
 func main() {

@@ -1,6 +1,6 @@
 package producers
 
-import "github.com/tam-code/lrn/src/kafka"
+import "github.com/tam-code/image-upload/src/kafka"
 
 type (
 	Producers struct {

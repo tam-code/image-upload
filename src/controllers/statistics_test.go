@@ -10,8 +10,8 @@ import (
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
-	mocks "github.com/tam-code/lrn/mocks/repositories"
-	"github.com/tam-code/lrn/src/models"
+	mocks "github.com/tam-code/image-upload/mocks/repositories"
+	"github.com/tam-code/image-upload/src/models"
 )
 
 func TestGetStatistics(t *testing.T) {

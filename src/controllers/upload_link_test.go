@@ -8,12 +8,12 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	mocks "github.com/tam-code/lrn/mocks/repositories"
+	mocks "github.com/tam-code/image-upload/mocks/repositories"
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/tam-code/lrn/src/models"
+	"github.com/tam-code/image-upload/src/models"
 )
 
 func TestCreateUploadLink(t *testing.T) {

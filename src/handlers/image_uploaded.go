@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/tam-code/lrn/src/models"
-	"github.com/tam-code/lrn/src/repositories"
+	"github.com/tam-code/image-upload/src/models"
+	"github.com/tam-code/image-upload/src/repositories"
 )
 
 type (

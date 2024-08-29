@@ -7,7 +7,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"github.com/tam-code/lrn/config"
+	"github.com/tam-code/image-upload/config"
 )
 
 func NewMongoDB(cfg config.MongoDBConfig) (*mongo.Database, error) {

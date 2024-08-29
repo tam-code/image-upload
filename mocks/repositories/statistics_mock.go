@@ -8,7 +8,7 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	models "github.com/tam-code/lrn/src/models"
+	models "github.com/tam-code/image-upload/src/models"
 )
 
 // MockStatisticsRepository is a mock of StatisticsRepository interface.

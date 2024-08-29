@@ -5,7 +5,7 @@ import (
 	"time"
 
 	segmentio "github.com/segmentio/kafka-go"
-	"github.com/tam-code/lrn/config"
+	"github.com/tam-code/image-upload/config"
 )
 
 type Message = segmentio.Message

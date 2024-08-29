@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/tam-code/lrn/src/kafka"
+	"github.com/tam-code/image-upload/src/kafka"
 )
 
 type (

@@ -1,4 +1,4 @@
-module github.com/tam-code/lrn
+module github.com/tam-code/image-upload
 
 go 1.22.0
 

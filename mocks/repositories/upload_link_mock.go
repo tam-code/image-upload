@@ -8,7 +8,7 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	models "github.com/tam-code/lrn/src/models"
+	models "github.com/tam-code/image-upload/src/models"
 )
 
 // MockUploadLinkRepository is a mock of UploadLinkRepository interface.

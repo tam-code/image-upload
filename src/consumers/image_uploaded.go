@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/tam-code/lrn/src/handlers"
-	"github.com/tam-code/lrn/src/kafka"
-	"github.com/tam-code/lrn/src/repositories"
+	"github.com/tam-code/image-upload/src/handlers"
+	"github.com/tam-code/image-upload/src/kafka"
+	"github.com/tam-code/image-upload/src/repositories"
 )
 
 type (

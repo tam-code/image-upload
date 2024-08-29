@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/tam-code/lrn/src/models"
+	"github.com/tam-code/image-upload/src/models"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )

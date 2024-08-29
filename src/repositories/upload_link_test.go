@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tam-code/lrn/src/models"
+	"github.com/tam-code/image-upload/src/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo/integration/mtest"
 	"gotest.tools/assert"
